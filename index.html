@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="ani.css" />
+	</head>
+	<body>
+		<div class="main_display" id="main_display">
+			<h1 class=" animated infinite rubberBand ">
+				WELCOME TO QUIZ MAKER APPLICATION
+			</h1>
+			<button
+				id="btn_d"
+				class="animated infinite pulse "
+				onclick="display_hide_question_show()"
+			>
+				MAKE QUIZ
+			</button>
+		</div>
+		<div class="main_question" id="main_question">
+			<h1 id="counnt" class="animated infinite tada">
+				Question
+			</h1>
+			<div class="circel" onclick="teacher_area()">
+				<div class="plus" onclick="teacher_area()"></div>
+			</div>
+			<input
+				placeholder="ENTER YOUR QUESTION"
+				type="text"
+				name=""
+				id="question_save_input"
+				class="question_save-input"
+			/>
+			<button
+				class="animated infinite pulse question_save_btn "
+				id="question_save_btn"
+				onclick="teacher_area_op()"
+			>
+				OPTIONS
+			</button>
+			<div class="optaions" id="optains">
+				<input
+					placeholder="ENTER 1 OPTION"
+					type="text"
+					name=""
+					id="optaions_inp1"
+					class="optaions_inp"
+					id="optaions_inp1"
+				/>
+				<input
+					placeholder="ENTER 2 OPTION"
+					type="text"
+					name=""
+					id="optaions_inp2"
+					class="optaions_inp"
+					id="optaions_inp2"
+				/>
+				<input
+					placeholder="ENTER 3 OPTION"
+					type="text"
+					name=""
+					id="optaions_inp3"
+					class="optaions_inp"
+					id="optaions_inp3"
+				/>
+				<input
+					placeholder="ENTER 4 OPTION"
+					type="text"
+					name=""
+					id="optaions_inp4"
+					class="optaions_inp"
+					id="optaions_inp4"
+				/>
+				<button
+					class="option_btn animated infinite pulse"
+					id="option_btn"
+					onclick="correctAnswer()"
+				>
+					correct answer
+				</button>
+			</div>
+			<div class="correct_answer" id="correct_answer">
+				<h1>ENTER THE CORRECT OPTION NUMBER</h1>
+				<input
+					type="text"
+					id="correct_answer_inp"
+					placeholder="EG : 1 2.."
+				/>
+				<button
+					id="correct_answer_btn"
+					onclick="teacherHideStudentStart()"
+					class="animated infinite pulse"
+				>
+					SAVE
+				</button>
+			</div>
+			<button
+				class="takeQuiz animated infinite swing"
+				id="takeQuiz"
+				onclick="quizStart()"
+			>
+				START QUIZ
+			</button>
+		</div>
+		<div class="qizStartMain" id="qizStartMain">
+			<div class="result">
+				<h1>
+					Exam Over.
+				</h1>
+				<h2>
+					Your Score Is 0 out of 5
+				</h2>
+			</div>
+			<div class="quizBox">
+				<button
+					onclick="str()"
+					class="df animated infinite pulse"
+					id="df"
+				>
+					LETS START
+				</button>
+				<div class="stdudentQuiz border" id="stdudentQuiz">
+					<h1 id="stdudentQuizQuestion"></h1>
+				</div>
+				<div class="studtndOption border" id="studtndOption">
+					<button id="btnn1" onclick="cli(event)"></button>
+					<button id="btnn2" onclick="cli(event)"></button>
+					<button id="btnn3" onclick="cli(event)"></button>
+					<button id="btnn4" onclick="cli(event)"></button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js.js"></script>
+</html>

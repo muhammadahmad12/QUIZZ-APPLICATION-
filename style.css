@@ -1,0 +1,254 @@
+* {
+	font-family: "Righteous", cursive;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	text-decoration: none;
+}
+.border {
+	border: 1px solid black;
+}
+.main_display {
+	height: 100vh;
+	width: 100%;
+	background-image: url("canva-quiz-MADesG0W7sQ\ copy.jpg");
+	background-size: 100% 100%;
+}
+.main_display > h1 {
+	position: absolute;
+	top: 100px;
+	left: 15%;
+	font-size: 50px;
+	color: #5b93cd;
+	background: #000;
+}
+.main_display > button {
+	position: absolute;
+	bottom: 180px;
+	left: 43%;
+	font-size: 30px;
+	height: 95px;
+	border-radius: 20px;
+	width: 200px;
+	transition-duration: 2s;
+	color: #5b93cd;
+	background: black;
+}
+.main_display > button:hover,
+.correct_answer > button:hover,
+.option_btn:hover,
+.question_save_btn:hover {
+	cursor: pointer;
+	border: 5px double #5b93cd;
+}
+.main_question {
+	padding: 1px;
+	height: 100vh;
+	width: 100%;
+	background: #5b93cd;
+	display: none;
+}
+.plus {
+	clip-path: polygon(
+		8% 32%,
+		35% 32%,
+		35% 0%,
+		65% 0%,
+		65% 31%,
+		92% 31%,
+		92% 63%,
+		65% 64%,
+		65% 100%,
+		35% 100%,
+		36% 62%,
+		8% 61%
+	);
+	height: 50px;
+	width: 60px;
+	background: black;
+}
+.circel {
+	border: 1px solid white;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	/* background: black;
+	color: #5b93cd; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.question_save_btn {
+	background: black;
+	height: 40px;
+	width: 120px;
+	color: hsl(211, 53%, 58%);
+	font-size: 20px;
+	position: absolute;
+	top: 90px;
+	left: 140px;
+	border-radius: 10px;
+	display: none;
+}
+.question_save-input {
+	height: 40px;
+	width: 320px;
+	border-radius: 50px;
+	margin-left: 50px;
+	margin-top: 30px;
+	padding: 20px;
+	display: none;
+}
+.optaions {
+	height: 300px;
+	width: 40%;
+	/* background: #000; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	position: absolute;
+	top: 20%;
+	left: 15%;
+	visibility: hidden;
+	padding: 1px;
+}
+.optaions_inp {
+	height: 50px;
+	width: 90%;
+	border-radius: 25px;
+	padding: 20px;
+}
+.option_btn {
+	height: 40px;
+	font-size: 1em;
+	width: 120px;
+	border-radius: 10px;
+	color: hsl(211, 53%, 58%);
+	background: black;
+}
+.correct_answer {
+	height: 30%;
+	width: 50%;
+	position: absolute;
+	bottom: 70px;
+	left: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+}
+.correct_answer > input {
+	width: 12%;
+	height: 60px;
+	border-radius: 100%;
+	padding: 20px;
+	margin-top: 10px;
+}
+.correct_answer > button {
+	height: 50px;
+	width: 120px;
+	color: #5b93cd;
+	background: #000;
+	border-radius: 20px;
+	font-size: 1em;
+	margin-top: 30px;
+}
+.correct_answer > h1 {
+	color: #000000;
+}
+#counnt {
+	font-size: 70px;
+	position: absolute;
+	right: 200px;
+	top: 100px;
+	visibility: hidden;
+}
+.takeQuiz {
+	height: 160px;
+	width: 160px;
+	font-size: 2em;
+	color: #5b93cd;
+	background: #000;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 190px;
+	right: 100px;
+	transition-duration: 3s;
+	visibility: hidden;
+}
+.takeQuiz:hover {
+	border: 10px double white;
+}
+.qizStartMain {
+	height: 0vh;
+	width: 100%;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.quizBox {
+	height: 40%;
+	width: 60%;
+	background: #5b93cd;
+	display: grid;
+	grid-template-rows: 45% 55%;
+}
+.stdudentQuiz {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+.studtndOption {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+}
+.studtndOption > button {
+	height: 40%;
+	width: 40%;
+	background: #000;
+	color: #5b93cd;
+	border-radius: 20px;
+	margin: 5px;
+	font-size: 1rem;
+}
+.df {
+	height: 120px;
+	width: 180px;
+	position: absolute;
+	top: 43%;
+	left: 45%;
+	font-size: 2em;
+	visibility: hidden;
+	color: #5b93cd;
+	background: #000;
+	border-radius: 10px;
+}
+.result{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.result h1{
+	padding: 10px 0px;
+}
+
+.result h1,.result h2{
+	color: white;
+}
